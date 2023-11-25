@@ -1,0 +1,38 @@
+Project Description:
+
+    - Phase 1
+    SIMULATED ANNEALING SUBSET SUM
+    Implement an annealing-based program to solve the subset sum problem (NP hard).
+    The subset sum problem is defined as: given a list of numbers and target value, find a subset of numbers from the list that add up to the target value (or the closest value to it).
+
+Some comments:
+
+    1. In main function, I handled read input file, outputs and "doAnnealing()" based on "SimAnneal.h" and "SimAnneal.cpp". I also reported actual CPU runtime based on "#include <ctime>".
+    2. The results can be checked by "output.txt", terminal outputs and "anneal.log" for debugging.
+    3. I tried changing the parameters in "SimAnneal.cpp", but the effect was not obvious, so I kept all the default parameter values.
+    4. In "perturbSolution()", I used removal or addition of values to achieve it. It also handled the operation of not adding the same number repeatedly, which is one of the reasons why large input size files take a longer time to run.
+    5. Add a few global variables in all files to make life easier.
+
+Way to run the project:
+
+    Makefile:
+    1. Typing "make all" should produce an executable called "subsum".
+    2. Typing "make test1" to run "list_100.txt". You are free to add (int)target sum after file name in Makefile like "list_100.txt 202".
+    3. Typing "make test2" to run "list_1K.txt". You are free to add (int)target sum after file name in Makefile like "list_1K.txt 10000".
+    4. Typing "make test3" to run "list_10K.txt". You are free to add (int)target sum after file name in Makefile like "list_10K.txt 1818841".
+    5. To see outputs, you can see "output.txt","anneal.log" and outputs in terminal after compilation of the program.
+    6. "make clean" to delete "output.txt", "subsum", "anneal.log" and all ".o" files.
+
+    plot.py (Assume has installed packages by "pip install matplotlib" in terminal):
+    1. open terminal and type "python3 plot.py".
+    2. The plot of cost function will be shown based on the newest "anneal.log".
+    3. The plot are not be saved after you close it, you need to run it again.
+
+Note:
+
+    1. More output details are in "output" directory.
+    2. Blind Random Algorithm C++ files are in "blind_random" directory, you need to run separately.
+
+
+
+
